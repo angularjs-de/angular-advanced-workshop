@@ -6,7 +6,6 @@ import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { HttpModule } from '@angular/http';
 import { BookRoutingModule } from './book-routing.module';
-import { ConfirmCandeactivateGuardService } from './shared/confirm-candeactivate-guard.service';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookNewComponent } from './book-new/book-new.component';
@@ -28,8 +27,7 @@ import { BookNewComponent } from './book-new/book-new.component';
     BookNewComponent
   ],
   providers: [
-    BookDataService,
-    ConfirmCandeactivateGuardService
+    BookDataService
   ]
 })
 export class BookModule { }
