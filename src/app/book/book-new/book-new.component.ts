@@ -26,7 +26,8 @@ export class BookNewComponent implements OnInit {
   onSubmit() {
 
     const book: Book = {
-      isbn: '',
+      id: this.form.value.isbn,
+      isbn: this.form.value.isbn,
       title: this.form.value.title,
       author: this.form.value.author,
       subtitle: '',
