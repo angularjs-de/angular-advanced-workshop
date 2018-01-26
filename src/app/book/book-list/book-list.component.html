@@ -1,5 +1,16 @@
-<ul>
-  <li *ngFor="let book of books | async">
-    <a [routerLink]="[book.isbn]">{{book.title}}</a>
-  </li>
-</ul>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">ISBN</th>
+      <th scope="col">Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books | async">
+      <td><a [routerLink]="[book.isbn]">{{book.title}}</a></td>
+      <td><a>{{book.isbn}}</a></td>
+      <td><a>{{book.author}}</a></td>
+    </tr>
+  </tbody>
+</table>
