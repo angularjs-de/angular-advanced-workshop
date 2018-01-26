@@ -1,5 +1,19 @@
 <div *ngIf="book">
-  <h2>{{book.title}} by <small>{{book.author}}</small></h2>
-  <h3>{{book.subtitle}}</h3>
-  <a [routerLink]="['edit']">Edit</a>
+  <div class="card m-2" style="width: 32rem;">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-4">
+          <img class="card-img-top" src="/assets/covers/{{book.isbn}}.jpg">
+        </div>
+        <div class="col-8">
+          <h5 class="card-title">{{book.title}}
+            <br>
+            <small>by {{book.author}}</small>
+          </h5>
+          <p class="card-text">{{book.subtitle}}</p>
+          <a class="btn btn-warning" [routerLink]="['edit']">Edit</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
