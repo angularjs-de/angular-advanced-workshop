@@ -23,10 +23,10 @@ describe('BookStaticAsyncDataService', () => {
     }));
   });
 
-  describe('getBook(isbn)', () => {
+  describe('getBookByIsbn(isbn)', () => {
     it('should return the first elemnt of data', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
       let result;
-      service.getBook(123).subscribe((book) => result = book)
+      service.getBookByIsbn(123).subscribe((book) => result = book)
 
       expect(result).toBe(service.staticBookData[0]);
     }));

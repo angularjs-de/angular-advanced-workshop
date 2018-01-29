@@ -50,7 +50,7 @@ export class BookStaticAsyncDataService {
     return Observable.of(this.staticBookData);
   }
 
-  getBook(isbn): Observable<Book> {
+  getBookByIsbn(isbn): Observable<Book> {
     return Observable.of(this.staticBookData[0]);
   }
 
