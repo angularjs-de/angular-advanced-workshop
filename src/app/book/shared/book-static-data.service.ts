@@ -59,6 +59,7 @@ export class BookStaticDataService {
   }
 
   createBook(book): Book {
+    this.staticBookData.push(book)
     return book;
   }
 

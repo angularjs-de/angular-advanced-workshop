@@ -59,6 +59,7 @@ export class BookStaticAsyncDataService {
   }
 
   createBook(book): Observable<Book> {
+    this.staticBookData.push(book)
     return Observable.of(book);
   }
 
