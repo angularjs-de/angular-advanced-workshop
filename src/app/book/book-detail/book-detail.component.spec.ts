@@ -4,19 +4,24 @@ import { BookDataService } from '../shared/book-data.service';
 import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import { BookDetailComponent } from './book-detail.component';
-import { DebugElement, Component, NO_ERRORS_SCHEMA } from '@angular/core';
+import { DebugElement, Component, Directive, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from "@angular/common";
 import { Observable } from 'rxjs';
 
-export class MockActivatedRoute {
-  parent: any;
-  params: any;
-  snapshot = {};
+// Disable RouterLink for this test
+@Directive({
+  selector: '[routerLink]',
+  host: {
+    '(click)': 'onClick()'
+  }
+})
+export class RouterLinkStubDirective {
+  @Input('routerLink') linkParams: any;
+  navigatedTo: any = null;
 
-  constructor(options) {
-    this.parent = options.parent;
-    this.params = options.params;
+  onClick() {
+    this.navigatedTo = this.linkParams;
   }
 }
 
@@ -31,19 +36,14 @@ describe('BookDetailComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        BookDetailComponent
-      ],
-      imports: [
-        RouterTestingModule
+        BookDetailComponent,
+        RouterLinkStubDirective
       ],
       providers: [
         { provide: BookDataService, useClass: BookStaticAsyncDataService },
         {
           provide: ActivatedRoute,
-          useValue: new MockActivatedRoute({
-            params: Observable.of({ isbn: '978-0-20163-361-0' }),
-            parent: new MockActivatedRoute({})
-          })
+          useValue: { params: Observable.of({ isbn: '978-0-20163-361-0' })}
         }
       ]
     })
