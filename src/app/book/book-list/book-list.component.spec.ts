@@ -20,16 +20,13 @@ describe('BookListComponent', () => {
       imports: [
         RouterTestingModule.withRoutes([])
       ],
-      providers: [{ provide: BookDataService, useClass: BookStaticAsyncDataService }]
+      providers: []
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BookListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
+    // create component and detect changes
   });
 
   it('should be created', () => {
@@ -37,18 +34,14 @@ describe('BookListComponent', () => {
   });
   
   it('should recieve 3 Books', () => {
-    expect(compiled.querySelectorAll('.book-row').length).toBe(3);
+    expect(true).toBeFalsy();
   });
 
   it('should display the title of each book', () => {
-    expect(compiled.querySelectorAll('.book-row')[0].innerText).toContain('Design Patterns');
-    expect(compiled.querySelectorAll('.book-row')[1].innerText).toContain('REST und HTTP');
-    expect(compiled.querySelectorAll('.book-row')[2].innerText).toContain('Eloquent JavaScript');
+    expect(true).toBeFalsy();
   });
 
   it('should link to the edit page of each book', () => {
-    expect(compiled.querySelectorAll('.book-row a')[0].href).toContain('/978-0-20163-361-0');
-    expect(compiled.querySelectorAll('.book-row a')[1].href).toContain('/978-3-86490-120-1');
-    expect(compiled.querySelectorAll('.book-row a')[2].href).toContain('/978-1-59327-584-6');
+    expect(true).toBeFalsy();
   });
 });
