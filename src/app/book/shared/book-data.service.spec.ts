@@ -8,14 +8,9 @@ describe('BookStaticDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [BookDataService],
-      imports: [HttpClientTestingModule]
+      imports: []
     });
   });
-
-  // check after each test there is no pending(open) request
-  afterEach(inject([HttpTestingController], (backend: HttpTestingController) => {
-    backend.verify();
-  }))
 
   it('should be created', inject([BookDataService], (service: BookDataService) => {
     expect(service).toBeTruthy();
@@ -23,52 +18,24 @@ describe('BookStaticDataService', () => {
 
   it('should return all books', inject([BookDataService, HttpTestingController],
     (service: BookDataService, backend: HttpTestingController) => {
-      // call service method and test IN the subscription. no need to use async anymore!!
-      service.getBooks()
-        .subscribe(books => {
-          expect(books).toEqual(staticBookData)
-        });
-      // Wait for the call and response with mockdata  `.flush()`
-      backend.expectOne('http://localhost:4730/books').flush(staticBookData, { status: 200, statusText: 'Ok' });
+      expect(true).toBeFalsy();
     }));
 
 
   it('should return a single book', inject([BookDataService, HttpTestingController],
     (service: BookDataService, backend: HttpTestingController) => {
-      // call service method and test IN the subscription. no need to use async anymore!!
-      service.getBookByIsbn(staticBookData[0].isbn)
-        .subscribe(books => {
-          expect(books).toEqual(staticBookData[0])
-        });
-      // Wait for the call and response with mockdata  `.flush()`
-      backend.expectOne(`http://localhost:4730/books/${staticBookData[0].isbn}`).flush(staticBookData[0], { status: 200, statusText: 'Ok' });
+      expect(true).toBeFalsy();
     }));
 
 
   it('should create a book with a post', inject([BookDataService, HttpTestingController],
     (service: BookDataService, backend: HttpTestingController) => {
-      // call service method and test IN the subscription. no need to use async anymore!!
-      service.createBook(staticBookData[0])
-        .subscribe(books => {
-          expect(books).toEqual(staticBookData[0])
-        });
-      // Wait for the call and response with mockdata  `.flush()`
-      backend
-        .expectOne({ method: "POST", url: 'http://localhost:4730/books' })
-        .flush(staticBookData[0], { status: 201, statusText: 'Created' });
+      expect(true).toBeFalsy();
     }));
 
     it('should update a book with a patch', inject([BookDataService, HttpTestingController],
       (service: BookDataService, backend: HttpTestingController) => {
-        // call service method and test IN the subscription. no need to use async anymore!!
-        service.updateBook(staticBookData[0].isbn, staticBookData[0])
-          .subscribe(books => {
-            expect(books).toEqual(staticBookData[0])
-          });
-        // Wait for the call and response with mockdata  `.flush()`
-        backend
-          .expectOne({ method: "PATCH", url: `http://localhost:4730/books/${staticBookData[0].isbn}` })
-          .flush(staticBookData[0]);
+        expect(true).toBeFalsy();
       }));
 });
 
