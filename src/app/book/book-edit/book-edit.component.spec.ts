@@ -20,7 +20,7 @@ describe('BookEditComponent', () => {
       ],
       imports: [
         FormsModule,
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule
       ],
       providers: [{ provide: BookDataService, useClass: BookStaticAsyncDataService }]
     })
@@ -30,7 +30,6 @@ describe('BookEditComponent', () => {
   beforeEach(async(() => {
     fixture = TestBed.createComponent(BookEditComponent);
     component = fixture.componentInstance;
-    component.ngOnInit();
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   }));
@@ -40,26 +39,14 @@ describe('BookEditComponent', () => {
   });
 
   it('should display the isbn of the loaded book', () => {
-    expect(compiled.querySelector('input[name="isbn"]').value).toContain('978-0-20163-361-0');
-    expect(compiled.querySelector('input[name="title"]').value).toContain('esign Patterns');
-    expect(compiled.querySelector('input[name="author"]').value).toContain('Erich Gamma / Richard Helm / Ralph E. Johnson / John Vlissides');
+    expect(true).toBeFalsy();
   });
 
-  it('should validate that title is required', fakeAsync(() => {
-    compiled.querySelector('input[name="title"]').value = ''
-    compiled.querySelector('input[name="title"]').dispatchEvent(new Event('input'));
-
-    tick();
-    fixture.detectChanges();
-
-    expect(compiled.querySelector('.title-error').innerText).toContain('Title is required');
+  it('should validate that title is required and show an error message', fakeAsync(() => {
+    expect(true).toBeFalsy();
   }));
 
-  it('should submit the whole form', fakeAsync(() => {
-    const submitSpy = spyOn(component, 'onSubmit');
-    
-    compiled.querySelector('button[type="submit"]').click()
-
-    expect(submitSpy.calls.any()).toBeTruthy();
-  }));
+  it('should submit the whole form on click on the submit button', () => {
+    expect(true).toBeFalsy();
+  });
 });
