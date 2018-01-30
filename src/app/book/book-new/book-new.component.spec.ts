@@ -21,7 +21,7 @@ describe('BookNewComponent', () => {
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        RouterTestingModule.withRoutes([])
+        RouterTestingModule
       ],
       providers: [{ provide: BookDataService, useClass: BookStaticAsyncDataService }]
     })
@@ -31,38 +31,28 @@ describe('BookNewComponent', () => {
   beforeEach(async(() => {
     fixture = TestBed.createComponent(BookNewComponent);
     component = fixture.componentInstance;
-    component.ngOnInit();
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   }));
 
+  // Tip: This tests based on reactive-forms, take a look at the BookNew Class (form attribute)
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
 
   it('should be invalid when initialized', () => {
-    expect(component.form.valid).toBeFalsy()
+    expect(true).toBeFalsy();
   });
 
-  it('should require title', () => {
-    let errors = {};
-    let title = component.form.controls['title'];
-    errors = title.errors || {};
-    expect(errors['required']).toBeTruthy(); 
+  it('should require title otherwise mark form as invalid', () => {
+    expect(true).toBeFalsy();
   });
 
-  it('should call createBook on submit', inject([BookDataService], (service: BookDataService) => {
-    const serviceSpy = spyOn(service, 'createBook').and.callThrough();
+  it('should be valid if all values are valid', () => {
+    expect(true).toBeFalsy();
+  });
 
-    component.form.controls['isbn'].setValue("1234567890123");
-    component.form.controls['title'].setValue("Test Book");
-    component.form.controls['author'].setValue("A author");
-
-    expect(component.form.valid).toBeTruthy();
-
-    component.onSubmit()
-
-    expect(serviceSpy.calls.any()).toBeTruthy();
-
+  it('should call BookData.createBook on submit', inject([BookDataService], (service: BookDataService) => {
+    expect(true).toBeFalsy();
   }));
 });
