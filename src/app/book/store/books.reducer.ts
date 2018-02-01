@@ -1,6 +1,7 @@
 import { Action } from "@ngrx/store";
 import { Book } from '../shared/book';
 import * as BooksActions from "./books.actions";
+import { ReadyBooks } from './books.actions';
 
 export const booksStoreName = "books";
 
@@ -32,6 +33,11 @@ export function booksReducer(state = initialState, action: Action): BooksState {
                 ...state,
                 books: LOAD_BOOKS.books
             };
+        }
+        case BooksActions.READY_BOOKS: {
+            const READY_BOOKS = <BooksActions.ReadyBooks>action;
+            console.log("Books Loaded");
+            return  {...state };
         }
         default: {
             return state;

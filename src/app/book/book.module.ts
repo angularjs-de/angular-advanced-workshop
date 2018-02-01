@@ -10,6 +10,8 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookNewComponent } from './book-new/book-new.component';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { BookEffects } from './store/books.effects';
 import { booksStoreName, booksReducer } from './store/books.reducer';
 
 
@@ -22,7 +24,8 @@ import { booksStoreName, booksReducer } from './store/books.reducer';
     ReactiveFormsModule,
     StoreModule.forFeature(booksStoreName, {
       books: booksReducer
-    })
+    }),
+    EffectsModule.forFeature([BookEffects])
   ],
   declarations: [
     BookComponent,

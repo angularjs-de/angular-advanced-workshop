@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavigationComponent } from './navigation/navigation.component';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NavigationComponent } from './navigation/navigation.component';
   imports: [
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({ maxAge: 100 }),
+    EffectsModule.forRoot([]),
     BrowserModule,
     FormsModule,
     HttpClientModule,
