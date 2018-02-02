@@ -13,11 +13,8 @@ export class BookDataService {
   constructor(private http: HttpClient, private store: Store<BooksState>, ) {
   }
 
-  getBooks(): void {
-    this.http.get<Book[]>('http://localhost:4730/books')
-    .subscribe(books => {
-      this.store.dispatch(new BookAction.LoadBooks(books));
-    })
+  getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>('http://localhost:4730/books')
   }
 
   getBookByIsbn(isbn: string): Observable<Book> {

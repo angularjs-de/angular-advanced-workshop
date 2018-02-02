@@ -11,17 +11,14 @@ import { BooksState, booksStoreName } from '../store/books.reducer';
   styleUrls: ['book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-
-  books$: Observable<Book[]>;
-
+  books: Book[];
 
   constructor(private store: Store<BooksState>, private bookData: BookDataService) {
-
   }
 
   ngOnInit() {
-    this.books$ = this.store.select(store => store[booksStoreName].books);
     this.bookData.getBooks()
+    .subscribe(books => this.books = books)
   }
 
 }

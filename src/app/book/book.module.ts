@@ -13,6 +13,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { BookEffects } from './store/books.effects';
 import { booksStoreName, booksReducer } from './store/books.reducer';
+import { BookPreviewComponent } from './book-preview/book-preview.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { booksStoreName, booksReducer } from './store/books.reducer';
     BookListComponent,
     BookDetailComponent,
     BookEditComponent,
-    BookNewComponent
+    BookNewComponent,
+    BookPreviewComponent
   ],
   providers: [
     BookDataService
