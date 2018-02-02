@@ -20,7 +20,7 @@ export class BookListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.books$ = this.store.select(store => store['books']['books'].books);
+    this.books$ = this.store.select(store => store[booksStoreName].books);
     this.bookData.getBooks()
   }
 

@@ -3,7 +3,7 @@ import { Book } from '../shared/book';
 import * as BooksActions from "./books.actions";
 import { ReadyBooks } from './books.actions';
 
-export const booksStoreName = "books";
+export const booksStoreName = "booksStore";
 
 export interface BooksState {
     books: Book[];

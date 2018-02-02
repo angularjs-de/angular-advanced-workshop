@@ -22,9 +22,7 @@ import { booksStoreName, booksReducer } from './store/books.reducer';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    StoreModule.forFeature(booksStoreName, {
-      books: booksReducer
-    }),
+    StoreModule.forFeature(booksStoreName, booksReducer),
     EffectsModule.forFeature([BookEffects])
   ],
   declarations: [
