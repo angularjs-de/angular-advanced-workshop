@@ -9,10 +9,6 @@ import { BookRoutingModule } from './book-routing.module';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookNewComponent } from './book-new/book-new.component';
-import { StoreModule } from '@ngrx/store';
-import { EffectsModule } from '@ngrx/effects';
-import { BookEffects } from './store/books.effects';
-import { booksStoreName, booksReducer } from './store/books.reducer';
 
 
 @NgModule({
@@ -21,9 +17,7 @@ import { booksStoreName, booksReducer } from './store/books.reducer';
     HttpModule,
     FormsModule,
     CommonModule,
-    ReactiveFormsModule,
-    StoreModule.forFeature(booksStoreName, booksReducer),
-    EffectsModule.forFeature([BookEffects])
+    ReactiveFormsModule
   ],
   declarations: [
     BookComponent,

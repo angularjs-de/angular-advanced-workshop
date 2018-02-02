@@ -2,22 +2,16 @@ import { Injectable } from '@angular/core';
 import { Book } from './book';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { Store } from '@ngrx/store';
-import { BooksState, booksStoreName } from '../store/books.reducer';
-import * as BookAction from '../store/books.actions';
 
 
 @Injectable()
 export class BookDataService {
 
-  constructor(private http: HttpClient, private store: Store<BooksState>, ) {
+  constructor(private http: HttpClient) {
   }
 
-  getBooks(): void {
-    this.http.get<Book[]>('http://localhost:4730/books')
-    .subscribe(books => {
-      this.store.dispatch(new BookAction.LoadBooks(books));
-    })
+  getBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>('http://localhost:4730/books')
   }
 
   getBookByIsbn(isbn: string): Observable<Book> {
