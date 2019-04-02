@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Book } from './book';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { BooksState, booksStoreName } from '../store/books.reducer';
 import * as BookAction from '../store/books.actions';
