@@ -2,7 +2,6 @@ import { BookStaticDataService } from './book-static-data.service';
 import { Book } from './book';
 
 describe('BookStaticDataService', () => {
-
   it('should be created', () => {
     //expect(service).toBeTruthy();
     expect(true).toBeFalsy();
@@ -20,16 +19,14 @@ describe('BookStaticDataService', () => {
     });
   });
 
-  describe('getBook(book)', () => {
+  describe('updateBook(book)', () => {
     it('should return the given book argument itself', () => {
       expect(true).toBeFalsy();
     });
   });
 
-
   describe('createBook(book)', () => {
     it('should return the book argument itself', () => {
-
       // const book: Book = {
       //   'title': 'The New Design Patterns',
       //   'subtitle': 'Elements of Reusable Object-Oriented Software',
@@ -43,7 +40,6 @@ describe('BookStaticDataService', () => {
       //   }
       // };
       expect(true).toBeFalsy();
-
     });
 
     it('should add the new book to the dataset', () => {
@@ -60,8 +56,6 @@ describe('BookStaticDataService', () => {
       //   }
       // };
       expect(true).toBeFalsy();
-
     });
   });
-
 });
