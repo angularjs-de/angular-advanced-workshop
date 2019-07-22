@@ -3,7 +3,7 @@ import { Book } from './book';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class BookDataService {
 
   constructor(private http: HttpClient) {
@@ -14,7 +14,7 @@ export class BookDataService {
   }
 
   getBookByIsbn(isbn: string): Observable<Book> {
-    return this.http.get<Book>(`http://localhost:4730/books/${isbn}`)
+    return this.http.get<Book>(`http://localhost:4730/books/${ isbn }`)
   }
 
   createBook(book: Book): Observable<Book> {
@@ -22,7 +22,7 @@ export class BookDataService {
   }
 
   updateBook(isbn: string, vector: any): Observable<Book> {
-    return this.http.patch<Book>(`http://localhost:4730/books/${isbn}`, vector)
+    return this.http.patch<Book>(`http://localhost:4730/books/${ isbn }`, vector)
   }
 
 }

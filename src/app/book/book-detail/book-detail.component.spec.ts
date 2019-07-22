@@ -16,17 +16,17 @@ describe('BookDetailComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        BookDetailComponent
+        BookDetailComponent,
       ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
       ],
-      providers: []
+      providers: [],
     })
       .compileComponents();
   });
 
-  beforeEach(inject([BookDataService], (service: BookDataService) => {
+  beforeEach(inject([ BookDataService ], (service: BookDataService) => {
     fixture = TestBed.createComponent(BookDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
