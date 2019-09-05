@@ -1,16 +1,18 @@
-import { RouterTestingModule } from '@angular/router/testing';
-import { BookStaticAsyncDataService } from './../shared/book-static-async-data.service';
-import { BookDataService } from '../shared/book-data.service';
 import {
-  ComponentFixture,
-  TestBed,
   async,
-  inject
+  ComponentFixture,
+  inject,
+  TestBed
 } from '@angular/core/testing';
-
+import {
+  AbstractControl,
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BookDataService } from '../shared/book-data.service';
+import { BookStaticAsyncDataService } from './../shared/book-static-async-data.service';
 import { BookNewComponent } from './book-new.component';
-import { DebugElement } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('BookNewComponent', () => {
   let component: BookNewComponent;
@@ -48,10 +50,8 @@ describe('BookNewComponent', () => {
   });
 
   it('should require title', () => {
-    let errors = {};
-    const title = component.form.controls.title;
-    errors = title.errors || {};
-    expect(errors.required).toBeTruthy();
+    const title: AbstractControl = component.form.controls.title;
+    expect(title.errors.required).toBeTruthy();
   });
 
   it('should call createBook on submit', inject(
