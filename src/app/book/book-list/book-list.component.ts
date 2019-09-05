@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Book } from '../shared/book';
 import { BookDataService } from '../shared/book-data.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'book-list',
-  templateUrl: 'book-list.component.html',
-  styleUrls: ['book-list.component.css']
+  templateUrl: 'book-list.component.html'
 })
 export class BookListComponent implements OnInit {
   books$: Observable<Book[]>;
