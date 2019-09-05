@@ -9,16 +9,11 @@ import { Observable } from 'rxjs';
   styleUrls: ['book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-
   books$: Observable<Book[]>;
 
-
-  constructor(private bookData: BookDataService) {
-
-  }
+  constructor(private bookData: BookDataService) {}
 
   ngOnInit() {
     this.books$ = this.bookData.getBooks();
   }
-
 }

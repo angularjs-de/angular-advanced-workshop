@@ -9,7 +9,6 @@ export class AppComponent {
   title = 'app works!';
 
   onTitleClicked($event) {
-
     console.log($event);
   }
 }

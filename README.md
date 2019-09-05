@@ -3,6 +3,7 @@
 This project is a reference implementation for our [Angular Advanced Intensiv Workshop](https://workshops.de/seminare-schulungen-kurse/angular-advanced).
 
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Running unit tests
@@ -10,6 +11,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 # How to updates the steps for our Workshop
+
 1. `git rebase -i a7bfef2d02ab39024567e281ea9b0096344494ea`
 2. Change `pick` to `edit` at the tasks you want to change
 3. Do your changes

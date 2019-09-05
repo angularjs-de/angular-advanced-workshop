@@ -8,9 +8,11 @@
   </thead>
   <tbody>
     <tr class="book-row" *ngFor="let book of books$ | async">
-      <td><a [routerLink]="[book.isbn]">{{book.title}}</a></td>
-      <td>{{book.isbn}}</td>
-      <td>{{book.author}}</td>
+      <td>
+        <a [routerLink]="[book.isbn]">{{ book.title }}</a>
+      </td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.author }}</td>
     </tr>
   </tbody>
 </table>

@@ -10,7 +10,6 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookNewComponent } from './book-new/book-new.component';
 
-
 @NgModule({
   imports: [
     BookRoutingModule,
@@ -26,8 +25,6 @@ import { BookNewComponent } from './book-new/book-new.component';
     BookEditComponent,
     BookNewComponent
   ],
-  providers: [
-    BookDataService
-  ]
+  providers: [BookDataService]
 })
-export class BookModule { }
+export class BookModule {}

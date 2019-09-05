@@ -4,13 +4,13 @@ import { Book } from './book';
 
 @Injectable()
 export class BookStaticDataService {
-
   staticBookData: Book[] = [
     {
       title: 'Design Patterns',
       subtitle: 'Elements of Reusable Object-Oriented Software',
       isbn: '978-0-20163-361-0',
-      abstract: 'Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.',
+      abstract:
+        'Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.',
       numPages: 395,
       author: 'Erich Gamma / Richard Helm / Ralph E. Johnson / John Vlissides',
       publisher: {
@@ -22,9 +22,11 @@ export class BookStaticDataService {
       title: 'REST und HTTP',
       subtitle: 'Entwicklung und Integration nach dem Architekturstil des Web',
       isbn: '978-3-86490-120-1',
-      abstract: 'Das Buch bietet eine theoretisch fundierte, vor allem aber praxistaugliche Anleitung zum professionellen Einsatz von RESTful HTTP. Es beschreibt den Architekturstil REST (Representational State Transfer) und seine Umsetzung im Rahmen der Protokolle des World Wide Web (HTTP, URIs und andere).',
+      abstract:
+        'Das Buch bietet eine theoretisch fundierte, vor allem aber praxistaugliche Anleitung zum professionellen Einsatz von RESTful HTTP. Es beschreibt den Architekturstil REST (Representational State Transfer) und seine Umsetzung im Rahmen der Protokolle des World Wide Web (HTTP, URIs und andere).',
       numPages: 330,
-      author: 'Stefan Tilkov / Martin Eigenbrodt / Silvia Schreier / Oliver Wolf',
+      author:
+        'Stefan Tilkov / Martin Eigenbrodt / Silvia Schreier / Oliver Wolf',
       publisher: {
         name: 'dpunkt.verlag',
         url: 'http://dpunkt.de/'
@@ -34,7 +36,8 @@ export class BookStaticDataService {
       title: 'Eloquent JavaScript',
       subtitle: 'A Modern Introduction to Programming',
       isbn: '978-1-59327-584-6',
-      abstract: 'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
+      abstract:
+        'JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
       numPages: 472,
       author: 'Marijn Haverbeke',
       publisher: {
@@ -44,7 +47,7 @@ export class BookStaticDataService {
     }
   ];
 
-  constructor() { }
+  constructor() {}
 
   getBooks(): Book[] {
     return this.staticBookData;
@@ -62,5 +65,4 @@ export class BookStaticDataService {
     this.staticBookData.push(book);
     return book;
   }
-
 }

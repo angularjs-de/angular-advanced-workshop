@@ -25,7 +25,6 @@ export class RouterLinkStubDirective {
   }
 }
 
-
 describe('BookDetailComponent', () => {
   let component: BookDetailComponent;
   let fixture: ComponentFixture<BookDetailComponent>;
@@ -35,19 +34,15 @@ describe('BookDetailComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        BookDetailComponent,
-        RouterLinkStubDirective
-      ],
+      declarations: [BookDetailComponent, RouterLinkStubDirective],
       providers: [
         { provide: BookDataService, useClass: BookStaticAsyncDataService },
         {
           provide: ActivatedRoute,
-          useValue: { params: Observable.of({ isbn: '978-0-20163-361-0' })}
+          useValue: { params: Observable.of({ isbn: '978-0-20163-361-0' }) }
         }
       ]
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(inject([BookDataService], (service: BookDataService) => {
@@ -64,5 +59,4 @@ describe('BookDetailComponent', () => {
   it('should load the book to the component', () => {
     expect(component.book.isbn).toBe('978-0-20163-361-0');
   });
-
 });
