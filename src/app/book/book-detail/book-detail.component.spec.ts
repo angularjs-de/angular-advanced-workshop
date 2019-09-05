@@ -6,7 +6,7 @@ import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { BookDetailComponent } from './book-detail.component';
 import { DebugElement, Component, Directive, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Location } from "@angular/common";
+import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 
 // Disable RouterLink for this test

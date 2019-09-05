@@ -17,16 +17,16 @@ describe('BookStaticAsyncDataService', () => {
   describe('getBooks()', () => {
     it('should return the whole list of books with an Observable', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
       let result;
-      service.getBooks().subscribe((books) => result = books)
-  
-      expect(result).toBe(service.staticBookData)
+      service.getBooks().subscribe((books) => result = books);
+
+      expect(result).toBe(service.staticBookData);
     }));
   });
 
   describe('getBookByIsbn(isbn)', () => {
     it('should return the first elemnt of data', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
       let result;
-      service.getBookByIsbn(123).subscribe((book) => result = book)
+      service.getBookByIsbn(123).subscribe((book) => result = book);
 
       expect(result).toBe(service.staticBookData[0]);
     }));
@@ -36,7 +36,7 @@ describe('BookStaticAsyncDataService', () => {
     it('should return the book argument itself', inject([BookStaticAsyncDataService], (service: BookStaticAsyncDataService) => {
       let result;
       const book: Book = service.staticBookData[0];
-      service.updateBook(book).subscribe((book) => result = book)
+      service.updateBook(book).subscribe((book) => result = book);
 
       expect(result).toBe(service.staticBookData[0]);
     }));
@@ -59,7 +59,7 @@ describe('BookStaticAsyncDataService', () => {
         }
       };
 
-      service.createBook(book).subscribe((book) => result = book)
+      service.createBook(book).subscribe((book) => result = book);
       expect(result).toBe(book);
     }));
 
@@ -78,11 +78,11 @@ describe('BookStaticAsyncDataService', () => {
         }
       };
 
-      service.createBook(book).subscribe((book) => result = book)
+      service.createBook(book).subscribe((book) => result = book);
       expect(service.staticBookData.length).toBe(4);
     }));
   });
 
 
-  
+
 });

@@ -46,7 +46,7 @@ describe('BookEditComponent', () => {
   });
 
   it('should validate that title is required', fakeAsync(() => {
-    compiled.querySelector('input[name="title"]').value = ''
+    compiled.querySelector('input[name="title"]').value = '';
     compiled.querySelector('input[name="title"]').dispatchEvent(new Event('input'));
 
     tick();
@@ -57,8 +57,8 @@ describe('BookEditComponent', () => {
 
   it('should submit the whole form', fakeAsync(() => {
     const submitSpy = spyOn(component, 'onSubmit');
-    
-    compiled.querySelector('button[type="submit"]').click()
+
+    compiled.querySelector('button[type="submit"]').click();
 
     expect(submitSpy.calls.any()).toBeTruthy();
   }));

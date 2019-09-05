@@ -5,7 +5,7 @@ import { Book } from './book';
 @Injectable()
 export class BookStaticDataService {
 
-  staticBookData : Book[] = [
+  staticBookData: Book[] = [
     {
       'title': 'Design Patterns',
       'subtitle': 'Elements of Reusable Object-Oriented Software',
@@ -59,7 +59,7 @@ export class BookStaticDataService {
   }
 
   createBook(book): Book {
-    this.staticBookData.push(book)
+    this.staticBookData.push(book);
     return book;
   }
 

@@ -64,7 +64,7 @@ describe('BookStaticDataService', () => {
           'url': 'http://www.addison-wesley.de/'
         }
       };
-      service.createBook(book)
+      service.createBook(book);
       expect(service.staticBookData.length).toBe(4);
     }));
   });

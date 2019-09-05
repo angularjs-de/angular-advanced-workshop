@@ -17,7 +17,7 @@ export class BookNewComponent implements OnInit {
   ngOnInit() {
 
     this.form = this.fb.group({
-      isbn: ['', Validators.compose([Validators.required, Validators.minLength(13),Validators.maxLength(13)])],
+      isbn: ['', Validators.compose([Validators.required, Validators.minLength(13), Validators.maxLength(13)])],
       title: ['', Validators.required],
       author: ['', Validators.required]
     });

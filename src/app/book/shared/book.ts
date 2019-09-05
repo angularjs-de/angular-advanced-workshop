@@ -1,5 +1,5 @@
 export interface Book {
-  id?: string,
+  id?: string;
   title: string;
   subtitle: string;
   isbn: string;
@@ -9,5 +9,5 @@ export interface Book {
   publisher: {
     name: string;
     url: string;
-  }
+  };
 }

@@ -12,7 +12,7 @@ export const routes: Routes = [{
   children: [{
     path: '',
     component: BookListComponent
-  },{
+  }, {
     path: 'new',
     component: BookNewComponent
   }, {

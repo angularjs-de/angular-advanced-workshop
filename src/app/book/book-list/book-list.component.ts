@@ -18,7 +18,7 @@ export class BookListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.books$ = this.bookData.getBooks()
+    this.books$ = this.bookData.getBooks();
   }
 
 }

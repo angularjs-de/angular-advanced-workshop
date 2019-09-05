@@ -35,7 +35,7 @@ describe('BookListComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
-  
+
   it('should recieve 3 Books', () => {
     expect(compiled.querySelectorAll('.book-row').length).toBe(3);
   });

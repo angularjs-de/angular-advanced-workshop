@@ -41,26 +41,26 @@ describe('BookNewComponent', () => {
   });
 
   it('should be invalid when initialized', () => {
-    expect(component.form.valid).toBeFalsy()
+    expect(component.form.valid).toBeFalsy();
   });
 
   it('should require title', () => {
     let errors = {};
-    let title = component.form.controls['title'];
+    const title = component.form.controls['title'];
     errors = title.errors || {};
-    expect(errors['required']).toBeTruthy(); 
+    expect(errors['required']).toBeTruthy();
   });
 
   it('should call createBook on submit', inject([BookDataService], (service: BookDataService) => {
     const serviceSpy = spyOn(service, 'createBook').and.callThrough();
 
-    component.form.controls['isbn'].setValue("1234567890123");
-    component.form.controls['title'].setValue("Test Book");
-    component.form.controls['author'].setValue("A author");
+    component.form.controls['isbn'].setValue('1234567890123');
+    component.form.controls['title'].setValue('Test Book');
+    component.form.controls['author'].setValue('A author');
 
     expect(component.form.valid).toBeTruthy();
 
-    component.onSubmit()
+    component.onSubmit();
 
     expect(serviceSpy.calls.any()).toBeTruthy();
 
