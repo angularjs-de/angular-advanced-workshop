@@ -6,6 +6,7 @@ import { emptyBook } from '../shared/book-empty';
 
 @Component({
   selector: 'ws-book-new',
+  styleUrls: ['./book-new.component.scss'],
   templateUrl: './book-new.component.html'
 })
 export class BookNewComponent implements OnInit, OnDestroy {

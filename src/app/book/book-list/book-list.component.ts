@@ -5,6 +5,7 @@ import { BookDataService } from '../shared/book-data.service';
 
 @Component({
   selector: 'ws-book-list',
+  styleUrls: ['./book-list.component.scss'],
   templateUrl: 'book-list.component.html'
 })
 export class BookListComponent implements OnInit {

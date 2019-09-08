@@ -1,58 +1,43 @@
-<h2>Edit</h2>
-<div *ngIf="book">
-  <form #form="ngForm" (ngSubmit)="save()">
-    <div class="form-group row">
-      <label for="isbn" class="col-sm-2 col-form-label">ISBN</label>
+<h2 class="mat-h2">Edit</h2>
+<ng-container *ngIf="book">
+  <form #form="ngForm" (ngSubmit)="save()" class="book-edit__form">
+    <mat-form-field>
       <input
-        class="form-control col-sm-10"
-        type="text"
-        name="isbn"
-        #isbn="ngModel"
+        matInput
         [(ngModel)]="book.isbn"
+        name="isbn"
+        placeholder="ISBN"
         readonly
       />
-    </div>
-    <div class="form-group row">
-      <label for="title" class="col-sm-2 col-form-label">Title</label>
+    </mat-form-field>
+    <mat-form-field>
       <input
-        type="text"
-        name="title"
-        #title="ngModel"
+        matInput
         [(ngModel)]="book.title"
+        name="title"
+        placeholder="Title"
         required
-        class="form-control col-sm-10"
       />
-      <small
-        class="col-sm-10 offset-sm-2 title-error"
-        [hidden]="!title.errors?.required"
-        >Title is required</small
-      >
-    </div>
-    <div class="form-group row">
-      <label for="author" class="col-sm-2 col-form-label">Author</label>
+    </mat-form-field>
+    <mat-form-field>
       <input
-        class="form-control col-sm-10"
-        type="text"
-        name="author"
-        #author="ngModel"
+        matInput
         [(ngModel)]="book.author"
+        name="author"
+        placeholder="Author"
+        #author
         required
       />
-      <small class="col-sm-10 offset-sm-2" [hidden]="!author.errors?.required"
-        >Author is required</small
-      >
-    </div>
-    <div class="row">
-      <button
-        [disabled]="!form.valid"
-        type="submit"
-        class="btn btn-success offset-sm-2"
-      >
-        Save
-      </button>
-      <button [routerLink]="['/books', book.isbn]" class="btn btn-warning">
+      <mat-error *ngIf="author.errors">Author is required</mat-error>
+    </mat-form-field>
+
+    <div class="book-actions">
+      <button mat-button [routerLink]="['/books', book.isbn]">
         Cancel
+      </button>
+      <button mat-button color="primary" [disabled]="!form.valid" type="submit">
+        Save
       </button>
     </div>
   </form>
-</div>
+</ng-container>
