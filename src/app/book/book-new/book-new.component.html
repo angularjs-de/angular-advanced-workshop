@@ -1,5 +1,5 @@
 <h2>Add New Book</h2>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<form [formGroup]="form" (ngSubmit)="create()">
   <div class="form-group row">
     <label for="isbn" class="col-sm-2 col-form-label">ISBN</label>
     <input class="form-control col-sm-10" type="text" formControlName="isbn" />

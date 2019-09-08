@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Book } from '../shared/book';
+import { Subscription } from 'rxjs';
 import { BookDataService } from '../shared/book-data.service';
+import { emptyBook } from '../shared/book-empty';
 
 @Component({
   selector: 'ws-book-new',
   templateUrl: './book-new.component.html'
 })
-export class BookNewComponent implements OnInit {
+export class BookNewComponent implements OnInit, OnDestroy {
+  sink = new Subscription();
   form: FormGroup;
 
   constructor(private fb: FormBuilder, private bookService: BookDataService) {}
@@ -16,34 +18,23 @@ export class BookNewComponent implements OnInit {
     this.form = this.fb.group({
       isbn: [
         '',
-        Validators.compose([
+        [
           Validators.required,
           Validators.minLength(13),
           Validators.maxLength(13)
-        ])
+        ]
       ],
       title: ['', Validators.required],
       author: ['', Validators.required]
     });
   }
 
-  onSubmit() {
-    const book: Book = {
-      id: this.form.value.isbn,
-      isbn: this.form.value.isbn,
-      title: this.form.value.title,
-      author: this.form.value.author,
-      subtitle: '',
-      abstract: '',
-      numPages: 123,
-      publisher: {
-        name: '',
-        url: ''
-      }
-    };
+  ngOnDestroy() {
+    this.sink.unsubscribe();
+  }
 
-    this.bookService
-      .createBook(book)
-      .subscribe((book: Book) => console.log('Added new book', book));
+  create() {
+    const book = { ...emptyBook(), ...this.form.value };
+    this.sink.add(this.bookService.createBook(book).subscribe());
   }
 }
