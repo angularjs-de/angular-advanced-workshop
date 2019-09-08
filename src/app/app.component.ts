@@ -2,13 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'ws-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'app works!';
-
-  onTitleClicked($event) {
-    console.log($event);
-  }
-}
+export class AppComponent {}

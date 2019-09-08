@@ -1,12 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ws-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
+  templateUrl: './book.component.html'
 })
-export class BookComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class BookComponent {}
