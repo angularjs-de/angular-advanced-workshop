@@ -1,6 +1,6 @@
 <h2>Edit</h2>
 <div *ngIf="book">
-  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+  <form #form="ngForm" (ngSubmit)="save()">
     <div class="form-group row">
       <label for="isbn" class="col-sm-2 col-form-label">ISBN</label>
       <input

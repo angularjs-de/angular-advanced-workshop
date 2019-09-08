@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { mergeMap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { Book } from '../shared/book';
 import { BookDataService } from '../shared/book-data.service';
 
@@ -9,7 +10,8 @@ import { BookDataService } from '../shared/book-data.service';
   templateUrl: './book-edit.component.html',
   styleUrls: ['./book-edit.component.scss']
 })
-export class BookEditComponent implements OnInit {
+export class BookEditComponent implements OnInit, OnDestroy {
+  sink = new Subscription();
   book: Book;
 
   constructor(
@@ -18,18 +20,24 @@ export class BookEditComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.params
-      .pipe(
-        mergeMap((params: { isbn: string }) =>
-          this.bookService.getBookByIsbn(params.isbn)
+    this.sink.add(
+      this.route.params
+        .pipe(
+          switchMap((params: { isbn: string }) =>
+            this.bookService.getBookByIsbn(params.isbn)
+          )
         )
-      )
-      .subscribe(book => (this.book = book));
+        .subscribe(book => (this.book = book))
+    );
   }
 
-  onSubmit(value) {
-    this.bookService
-      .updateBook(this.book.isbn, value)
-      .subscribe((book: Book) => console.log('Book updated', book));
+  ngOnDestroy() {
+    this.sink.unsubscribe();
+  }
+
+  save() {
+    this.sink.add(
+      this.bookService.updateBook(this.book.isbn, this.book).subscribe()
+    );
   }
 }
