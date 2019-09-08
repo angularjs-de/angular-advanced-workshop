@@ -5,7 +5,7 @@ import { BookDataService } from '../shared/book-data.service';
 // import 'rxjs/add/operator/mergeMap';
 
 @Component({
-  selector: 'book-detail',
+  selector: 'ws-book-detail',
   templateUrl: 'book-detail.component.html'
 })
 export class BookDetailComponent implements OnInit {

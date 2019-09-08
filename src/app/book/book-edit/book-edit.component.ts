@@ -5,7 +5,7 @@ import { Book } from '../shared/book';
 import { BookDataService } from '../shared/book-data.service';
 
 @Component({
-  selector: 'book-edit',
+  selector: 'ws-book-edit',
   templateUrl: './book-edit.component.html',
   styleUrls: ['./book-edit.component.scss']
 })
