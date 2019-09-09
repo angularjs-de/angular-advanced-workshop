@@ -1,7 +1,7 @@
 <mat-list>
   <img src="/assets/books.jpg">
   <h3 mat-subheader>Books</h3>
-  <mat-list-item
+  <a mat-list-item
     [routerLink]="[book.isbn]"
     *ngFor="let book of books$ | async"
     class="book-single"
@@ -9,5 +9,5 @@
     <mat-icon mat-list-icon>book</mat-icon>
     <h4 mat-line>{{ book.title }}</h4>
     <p mat-line>{{ book.author }}</p>
-  </mat-list-item>
+  </a>
 </mat-list>
