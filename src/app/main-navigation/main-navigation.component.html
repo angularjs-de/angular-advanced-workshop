@@ -15,16 +15,16 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
+      <span
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
+        tabindex="0"
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span (click)="drawer.toggle()">🐒 Book Monkey</span>
+    </span>
+      <span>🐒 Book Monkey</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
