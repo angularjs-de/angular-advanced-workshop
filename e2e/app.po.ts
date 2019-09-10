@@ -1,4 +1,5 @@
-import { browser, element, by } from 'protractor';
+import { browser, element, by, WebDriver } from 'protractor';
+const AxeBuilder = require('axe-webdriverjs');
 
 export class AngularWorkshopPage {
   navigateTo() {
@@ -7,5 +8,9 @@ export class AngularWorkshopPage {
 
   getParagraphText() {
     return element(by.css('app-root h1')).getText();
+  }
+  
+  a11y(resultFn) {
+    return AxeBuilder(WebDriver).analyze(resultFn)
   }
 }

@@ -11,4 +11,11 @@ describe('angular-workshop App', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('app works!');
   });
+
+  it('should be a11y conform', (done) => {
+    page.a11y((results)  => {
+      expect(results.violations.length).toBe(0);
+      done();
+    });
+  });
 });
