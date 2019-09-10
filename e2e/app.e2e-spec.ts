@@ -1,6 +1,6 @@
 import { AngularWorkshopPage } from './app.po';
 
-describe('angular-workshop App', function() {
+describe('angular-workshop App', () => {
   let page: AngularWorkshopPage;
 
   beforeEach(() => {
