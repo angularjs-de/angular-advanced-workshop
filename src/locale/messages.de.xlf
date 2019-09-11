@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="41aac9cecddc9f345c263d3742192e68e227e413" datatype="html">
+        <source>Menu</source>
+        <target>Menü</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d2bbf8c30d3d8b3f08a9d0b00d5045d6cbc12104" datatype="html">
+        <source>Books</source>
+        <target>Bücher</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d72c14b0f3876774786e2c2c924721ab601dc6a0" datatype="html">
+        <source>Create book</source>
+        <target>Neues Buch anlegen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8973bc8c23a3f7c42aa9bd447386a3b0d26b74bc" datatype="html">
+        <source>menu</source>
+        <target>Menü</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cebb6704a3befced10e0735caaaa0e3ec81a8386" datatype="html">
+        <source>🐒 Book Monkey</source>
+        <target>🐒 Bücher Äffchen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
