@@ -13,6 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { DateComponentComponent } from './date-component/date-component.component';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
 
 @NgModule({
   declarations: [AppComponent, MainNavigationComponent, DateComponentComponent],
@@ -31,4 +33,8 @@ import { DateComponentComponent } from './date-component/date-component.componen
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe, 'de');
+  }
+}
