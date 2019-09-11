@@ -12,9 +12,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
+import { DateComponentComponent } from './date-component/date-component.component';
+import { LangSelectComponent } from './lang-select/lang-select.component';
 
 @NgModule({
-  declarations: [AppComponent, MainNavigationComponent],
+  declarations: [AppComponent, MainNavigationComponent, DateComponentComponent, LangSelectComponent],
   imports: [
     BrowserModule,
     FormsModule,
