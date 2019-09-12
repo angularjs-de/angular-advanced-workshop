@@ -1,4 +1,6 @@
 {
-  "title": "transloco de",
-  "dynamic": "transloco {{value}}"
+  "menu": "Menü",
+  "books": "Bücher",
+  "create_books": "Buch anlegen",
+  "title": "Book Monkey"
 }

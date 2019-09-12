@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" *transloco="let t">
   <mat-sidenav
     #drawer
     class="sidenav"
@@ -7,10 +7,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>{{t.menu}}</mat-toolbar>
     <mat-nav-list (click)="drawer.close()">
-      <a mat-list-item routerLink="/">Books</a>
-      <a mat-list-item routerLink="books/new">Create book</a>
+      <a mat-list-item routerLink="/">{{t.books}}</a>
+      <a mat-list-item routerLink="books/new">{{t.create_books}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,9 +22,9 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon">{{t.menu}}</mat-icon>
       </button>
-      <span (click)="drawer.toggle()">🐒 Book Monkey</span>
+      <span (click)="drawer.toggle()">{{t.title}}</span>
     </mat-toolbar>
     <ng-content></ng-content>
     <footer>

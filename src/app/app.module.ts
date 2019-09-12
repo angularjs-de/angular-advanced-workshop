@@ -38,8 +38,8 @@ import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/tran
       provide: TRANSLOCO_CONFIG,
       useValue: {
         listenToLangChange: false,
-        defaultLang: 'en',
-        fallbackLang: 'de',
+        defaultLang: 'de',
+        fallbackLang: 'en',
         prodMode: environment.production,
         scopeStrategy: 'shared'
       } as TranslocoConfig
