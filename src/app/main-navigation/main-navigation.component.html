@@ -7,10 +7,10 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar i18n>Menu</mat-toolbar>
     <mat-nav-list (click)="drawer.close()">
-      <a mat-list-item routerLink="/">Books</a>
-      <a mat-list-item routerLink="books/new">Create book</a>
+      <a mat-list-item routerLink="/" i18n>Books</a>
+      <a mat-list-item routerLink="books/new" i18n>Create book</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,9 +22,9 @@
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async"
       >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" i18n>menu</mat-icon>
       </button>
-      <span (click)="drawer.toggle()">🐒 Book Monkey</span>
+      <span (click)="drawer.toggle()" i18n>🐒 Book Monkey</span>
     </mat-toolbar>
     <ng-content></ng-content>
     <footer>
