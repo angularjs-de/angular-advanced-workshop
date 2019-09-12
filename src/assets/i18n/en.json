@@ -1,4 +1,7 @@
 {
-    "MENU": "Menu",
-    "SELECT_LANG": "Choose your language:"
+	"DATE_CMP": {
+		"TODAY_IS": ""
+	},
+	"MENU": "Menu",
+	"SELECT_LANG": "Choose your language:"
 }

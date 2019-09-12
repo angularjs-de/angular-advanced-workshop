@@ -1,7 +1,4 @@
 <ws-main-navigation>
-    {{ 'SELECT_LANG' | translate }}
-    <select #langSelect (change)="translate.use(langSelect.value)">
-      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
-    </select>
+    <ws-lang-select></ws-lang-select>
   <router-outlet></router-outlet>
 </ws-main-navigation>
