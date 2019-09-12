@@ -13,6 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { DateComponentComponent } from './date-component/date-component.component';
+import { environment } from '../environments/environment';
+import { translocoLoader } from './transloco.loader';
+import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
 
 @NgModule({
   declarations: [AppComponent, MainNavigationComponent, DateComponentComponent],
@@ -27,8 +30,21 @@ import { DateComponentComponent } from './date-component/date-component.componen
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    TranslocoModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [{
+      provide: TRANSLOCO_CONFIG,
+      useValue: {
+        listenToLangChange: false,
+        defaultLang: 'en',
+        fallbackLang: 'de',
+        prodMode: environment.production,
+        scopeStrategy: 'shared'
+      } as TranslocoConfig
+    },
+    translocoLoader
+  ]
 })
 export class AppModule {}
