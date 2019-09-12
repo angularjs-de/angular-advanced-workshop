@@ -1,4 +1,4 @@
-<h2 class="mat-h2">Edit</h2>
+<h2 class="mat-h2" i18n>Edit</h2>
 <ng-container *ngIf="book">
   <form #form="ngForm" (ngSubmit)="save()" class="book-edit__form">
     <mat-form-field>
@@ -28,14 +28,14 @@
         #author
         required
       />
-      <mat-error *ngIf="author.errors">Author is required</mat-error>
+      <mat-error *ngIf="author.errors" i18n>Author is required</mat-error>
     </mat-form-field>
 
     <div class="book-actions">
-      <button mat-button [routerLink]="['/books', book.isbn]">
+      <button mat-button [routerLink]="['/books', book.isbn]" i18n>
         Cancel
       </button>
-      <button mat-raised-button color="primary" [disabled]="!form.valid" type="submit">
+      <button mat-raised-button color="primary" [disabled]="!form.valid" type="submit" i18n>
         Save
       </button>
     </div>

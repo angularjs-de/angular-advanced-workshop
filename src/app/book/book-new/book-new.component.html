@@ -1,4 +1,4 @@
-<h2 class="mat-h2">Add New Book</h2>
+<h2 class="mat-h2" i18n="@@add_new_book">Add New Book</h2>
 <form [formGroup]="form" (ngSubmit)="create()" class="book-new__form">
   <mat-form-field>
     <input matInput formControlName="isbn" placeholder="ISBN" required />
@@ -7,22 +7,22 @@
         form.get('isbn').hasError('minlength') ||
         form.get('isbn').hasError('maxlength')
       "
-      >ISBN has to be 13 characters long</mat-error
+      i18n>ISBN has to be 13 characters long</mat-error
     >
     <mat-error *ngIf="form.get('isbn').hasError('required')"
-      >ISBN is required</mat-error
+    i18n>ISBN is required</mat-error
     >
   </mat-form-field>
   <mat-form-field>
     <input matInput formControlName="title" placeholder="Title" required />
     <mat-error *ngIf="form.get('title').hasError('required')"
-      >Title is required</mat-error
+    i18n>Title is required</mat-error
     >
   </mat-form-field>
   <mat-form-field>
     <input matInput formControlName="author" placeholder="Author" required />
     <mat-error *ngIf="form.get('author').hasError('required')"
-      >Author is required</mat-error
+    i18n>Author is required</mat-error
     >
   </mat-form-field>
 
@@ -33,7 +33,7 @@
       [disabled]="!form.valid"
       type="submit"
       class="btn btn-success offset-sm-2"
-    >
+      i18n>
       CREATE
     </button>
   </div>

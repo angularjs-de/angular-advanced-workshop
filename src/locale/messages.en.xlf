@@ -1,57 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="en">
     <body>
       <trans-unit id="41aac9cecddc9f345c263d3742192e68e227e413" datatype="html">
-        <source>Menu</source>
-        <target>Menü</target>
+        <source>Menu</source><target state="final">Menu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="d2bbf8c30d3d8b3f08a9d0b00d5045d6cbc12104" datatype="html">
-        <source>Books</source>
-        <target>Bücher</target>
-        
-      <context-group purpose="location"><context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context><context context-type="linenumber">12</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/book/book-list/book-list.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+        <source>Books</source><target state="final">Books</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/book/book-list/book-list.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="d72c14b0f3876774786e2c2c924721ab601dc6a0" datatype="html">
-        <source>Create book</source>
-        <target>Neues Buch anlegen</target>
+        <source>Create book</source><target state="final">Create book</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8973bc8c23a3f7c42aa9bd447386a3b0d26b74bc" datatype="html">
-        <source>menu</source>
-        <target>Menü</target>
+        <source>menu</source><target state="final">menu</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="cebb6704a3befced10e0735caaaa0e3ec81a8386" datatype="html">
-        <source>🐒 Book Monkey</source>
-        <target>🐒 Bücher Äffchen</target>
+        <source>🐒 Book Monkey</source><target state="final">🐒 Book Monkey</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/main-navigation/main-navigation.component.html</context>
           <context context-type="linenumber">27</context>
         </context-group>
-      </trans-unit><trans-unit id="c579a35156940ef439082b06bdaea30f4f778073" datatype="html">
-        <source>EDIT</source><target state="new">EDIT</target>
+      </trans-unit>
+      <trans-unit id="c579a35156940ef439082b06bdaea30f4f778073" datatype="html">
+        <source>EDIT</source><target state="final">EDIT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-detail/book-detail.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
-      </trans-unit><trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
-        <source>Edit</source><target state="new">Edit</target>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source><target state="final">Edit</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-edit/book-edit.component.html</context>
           <context context-type="linenumber">1</context>
         </context-group>
-      </trans-unit><trans-unit id="04bd48ab3afcfcc3608abaa807e8e869fdd911af" datatype="html">
-        <source>Author is required</source><target state="new">Author is required</target>
+      </trans-unit>
+      <trans-unit id="04bd48ab3afcfcc3608abaa807e8e869fdd911af" datatype="html">
+        <source>Author is required</source><target state="final">Author is required</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-edit/book-edit.component.html</context>
           <context context-type="linenumber">31</context>
@@ -60,54 +65,61 @@
           <context context-type="sourcefile">src/app/book/book-new/book-new.component.html</context>
           <context context-type="linenumber">25</context>
         </context-group>
-      </trans-unit><trans-unit id="a5433ae2324496bea9537caa5e8a2719d8e958d8" datatype="html">
+      </trans-unit>
+      <trans-unit id="a5433ae2324496bea9537caa5e8a2719d8e958d8" datatype="html">
         <source>
         Cancel
-      </source><target state="new">
+      </source><target state="final">
         Cancel
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-edit/book-edit.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
-      </trans-unit><trans-unit id="f8b53b407af242e77dc3391947f23988f3451e64" datatype="html">
+      </trans-unit>
+      <trans-unit id="f8b53b407af242e77dc3391947f23988f3451e64" datatype="html">
         <source>
         Save
-      </source><target state="new">
+      </source><target state="final">
         Save
       </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-edit/book-edit.component.html</context>
           <context context-type="linenumber">38</context>
         </context-group>
-      </trans-unit><trans-unit id="add_new_book" datatype="html">
-        <source>Add New Book</source><target state="new">Add New Book</target>
+      </trans-unit>
+      <trans-unit id="add_new_book" datatype="html">
+        <source>Add New Book</source><target state="final">Add New Book</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-new/book-new.component.html</context>
           <context context-type="linenumber">1</context>
         </context-group>
-      </trans-unit><trans-unit id="244d75304e9034ac0aecd8f24da8b7a21adb64ed" datatype="html">
-        <source>ISBN has to be 13 characters long</source><target state="new">ISBN has to be 13 characters long</target>
+      </trans-unit>
+      <trans-unit id="244d75304e9034ac0aecd8f24da8b7a21adb64ed" datatype="html">
+        <source>ISBN has to be 13 characters long</source><target state="final">ISBN has to be 13 characters long</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-new/book-new.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
-      </trans-unit><trans-unit id="c7dd2b4c9785a36e980e64ef2188da844b3a81c9" datatype="html">
-        <source>ISBN is required</source><target state="new">ISBN is required</target>
+      </trans-unit>
+      <trans-unit id="c7dd2b4c9785a36e980e64ef2188da844b3a81c9" datatype="html">
+        <source>ISBN is required</source><target state="final">ISBN is required</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-new/book-new.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-      </trans-unit><trans-unit id="629ad90704c47ad15d4168931d8ab26bdc32e90d" datatype="html">
-        <source>Title is required</source><target state="new">Title is required</target>
+      </trans-unit>
+      <trans-unit id="629ad90704c47ad15d4168931d8ab26bdc32e90d" datatype="html">
+        <source>Title is required</source><target state="final">Title is required</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/book/book-new/book-new.component.html</context>
           <context context-type="linenumber">19</context>
         </context-group>
-      </trans-unit><trans-unit id="577ff450cd8d905a75bf92dad2457515d3a49b3b" datatype="html">
+      </trans-unit>
+      <trans-unit id="577ff450cd8d905a75bf92dad2457515d3a49b3b" datatype="html">
         <source>
       CREATE
-    </source><target state="new">
+    </source><target state="final">
       CREATE
     </target>
         <context-group purpose="location">
