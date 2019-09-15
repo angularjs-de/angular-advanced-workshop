@@ -7,11 +7,6 @@ describe('angular-workshop App', () => {
     page = new AngularWorkshopPage();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
-
   it('should be a11y conform', (done) => {
     page.a11y((results)  => {
       expect(results.violations.length).toBe(0);
